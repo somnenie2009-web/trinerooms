@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: skazochnyi-rezhissyor
+    runtime: python
+    plan: free
+    buildCommand: 'python -m py_compile server.py'
+    startCommand: 'python server.py'
+    healthCheckPath: /health
